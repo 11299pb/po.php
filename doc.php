@@ -9,7 +9,21 @@ class Producto{
 
     // DEFINICION DE METODOS
    public function mostrarNombre(){
+        echo "El producto es: ";
         echo $this->nombre;
+
+    }
+    public function mostrarPrecio(){
+        echo"El precio es: ";
+        echo $this->precio;
+
+    }
+    public function mostrarDisponible(){
+        if($this->disponible){
+            echo"Esta disponible";
+        }else{
+            echo"No esta disponible";
+        }
 
     }
 }
@@ -18,14 +32,33 @@ class Producto{
 //CREAR UNA INSTANCIA
 $mesa = new Producto();
 
-$mesa->nombre= "Mesa";
+$mesa->nombre= "Mesa";  
 $mesa->precio = 500;
-$mesa->disponible = true;
-
+$mesa->disponible = false;
 
 echo "<pre>";
-var_dump($producto1);
+var_dump($mesa);
 echo "</pre>";
 
 $mesa->mostrarNombre();
-$mesa->mostrarNombre();
+echo"<br>";
+$mesa->mostrarPrecio();
+echo"<br>";
+$mesa->mostrarDisponible();
+
+
+$silla = new Producto();
+
+$silla->nombre= "silla";  
+$silla->precio = 500;
+$silla->disponible = true;
+
+echo "<pre>";
+var_dump($silla);
+echo "</pre>";
+
+$silla->mostrarNombre();
+echo"<br>";
+$silla->mostrarPrecio();
+echo"<br>";
+$silla->mostrarDisponible();
