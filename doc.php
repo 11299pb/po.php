@@ -7,6 +7,14 @@ class Producto{
     public  $nombre = "nombre";
     public  $disponible = true;
 
+    //METODO CONSTRUCTOR
+    public fuction __construct(int $precio = 0 ,string $nombre ='sin nombre', bool $disponible)
+    {
+        $this->precio = $precio;
+        $this->nombre = $nombre;
+        $this->disponible = $disponible;
+    }
+
     // DEFINICION DE METODOS
    public function mostrarNombre(){
         echo "El producto es: ";
